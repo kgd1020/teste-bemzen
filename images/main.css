@@ -82,7 +82,7 @@ nav .navegar ul li a:hover {
       rgba(173, 204, 248, 0.3),
       rgba(32, 73, 95, 0.7)
     ),
-    url(images/fundoMar.jpg);
+    url(fundoMar.jpg);
   width: 100%;
   height: 100vh;
   background-size: cover;
