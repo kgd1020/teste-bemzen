@@ -1,0 +1,485 @@
+/* * {
+  box-shadow: inset 0px 0px 2px rgba(255, 0, 0, 0.9);
+}
+ */
+/* IMPORTAR FONTES */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ESCOLHA FONTE */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9ff;
+}
+/* TAGS GLOBAIS */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(35, 35, 85);
+}
+span {
+  font-size: 0.9rem;
+  color: #757373;
+}
+h6 {
+  font-size: 1.1rem;
+  color: rgb(24, 24, 49);
+}
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: #4682b4;  
+  display: flex; /* DETERMINA O TIPO DE BOX PARA ELEMENTO(S) */
+  flex-direction: row; /* BOX EM LINHA */
+  justify-content: space-between; /* ALINHA OS ITENS (BOX) COM ESPAÇO ENTRE ELES */
+  align-items: center;
+  padding: 1vw 8vh; /* CRIA 1 ESPAÇO ACIMA/ABAIXO E 8 DIR/ESQ (VW (viewport width)=1% LARG // VH (viewport height)=1% ALT) */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); /*EFEITO SOMBREADO,  SÓ COLOQUEI ESSE ATRIBUTO APÓS 'nav .navegar ul li a:hover' */
+  z-index: 999;
+}
+nav img {
+  width: 85px; /* ALTERAR O TAMANHO DA IMAGEM DENTRO DA 'TAG NAV' */
+  height: 75px;
+  cursor: pointer; /* TORNA A IMAGEM CLICÁVEL, DIRECINADA PARA A PÁGINA HOME */
+  align-items: center;
+  margin-left: 70px;
+}
+nav .navegar ul {
+  /* TRATANDO A LISTA 'ul' DENTRO DA CLASSE 'navegar' DENTRO DA TAG 'nav' */
+  display: flex; /* TORNA A LISTA HORIZONTAL */
+  justify-content: flex-end; /* ALINHA O BOX NO FINAL (ESQUERDA) */
+  align-items: center; /* ALINHA OS ÍTENS DO BOX NO CENTRO  */
+}
+nav .navegar ul li {
+  /* TRATANDO OS ÍTENS 'li' DA LISTA 'ul' */
+  list-style: none; /* RETIRA OS PONTOS (. ítem A) ANTES DOS ÍTENS DA LISTA  */
+  margin-left: 30px; /* DISTANCIA OS ÍTENS */
+}
+nav .navegar ul li a {
+  /* CRIAR EFEITO FOCO SOBRE OS LINKS */
+  text-decoration: none; /*RETIRA O SUBLINHADO DE CADA ÍTEM */
+  color: #e0ffff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.4s ease; /* TEMPO ENTRE A MUDANÇA DE COR NOS LINKS QDO SE PASSA O MOUSE */
+}
+nav .navegar ul li a:hover {
+  /* EFEITO DE FOCO, MUDA COR DOS LINKS QDO PASSA O MOUSE POR CIMA */
+  color: rgb(21, 21, 100);
+   /* A NOVA COR QDO O MOUSE PASSA POR CIMA */
+  transition: 0.3 ease;
+}
+
+
+/* INÍCIO */
+#inicio {
+  /* CRIAR UM GRADIENTE LINEAR (COR DE CIMA E DE BAIXO DA IMAGEM) P/ RECEBER A IMAGEM */
+  background-image: linear-gradient(
+      rgba(173, 204, 248, 0.3),
+      rgba(32, 73, 95, 0.7)
+    ),
+    url(images/fundoMar.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex; /* COLOCA OS ELEMENTOS (h2 E p) NA MESMA LINHA E NÃO UM ABAIXO DO OUTRO */
+  flex-direction: column;
+  justify-content: center; /* TRAZ OS ELEMENTOS PARA O CENTRO NO SENTIDO VERTICAL */
+  align-items: center; /* TRAZ OS ELEMENTOS PARA O CENTRO NO SENTIDO HORIZONTAL*/
+  text-align: center;
+  padding-top: 40px;
+}
+#inicio h2 {
+  font-size: 2.2rem;
+  letter-spacing: 1px; /* ESPAÇO ENTRE AS LETRAS */
+   color: #483d8b;
+}
+#inicio h2 span{
+  /* color: #DC143C; */
+  color: #e0ffff;
+  font-size: 2.8rem;
+}
+#inicio p {
+  width: 65%;
+  color: #e0ffff;
+  font-size: 0.9rem;
+  line-height: 25px;
+}
+#inicio .btn {
+  /* TRATAR DA CLASSE 'btn' DENTRO DA SESSÃO'section id="home" */
+  margin: 25px;
+}
+#inicio a {
+  /* TRATAR DO ELEMENTO 'a' (BOTÕES) DENTRO DA CLASSE 'btn */
+  text-decoration: none;
+  font-size: 00.9rem;
+  padding: 13px 35px;
+  background-color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+#inicio a.azul {
+  color: #fff;
+  background-color: rgb(21, 21, 100);
+}
+#inicio a.azul:hover {
+  color: rgb(21, 21, 100);
+  background-color: #fff;
+}
+#inicio a.amarelo {
+  color: #fff;
+  background-color: #ffd700;
+}
+#inicio a.amarelo:hover {
+  color: rgb(21, 21, 100);
+  background-color: #fff;
+}
+
+/* RECURSOS */
+
+#recursos {
+  /* TRATAR A SESSÃO FEATURES - SESSÃO QUE VEM ABAIXO DA IMAGEM PRINCIPAL (MAR), COMPOSTA POR TÍTULO, PARÁGRAFO E 3 CARDS EM COLUNA */
+  padding: 6vw 8vw 0vw 8vw; /* ESPAÇOS NA ORDEM: CIMA - DIREITA - FUNDO (BAIXO) - ESQUERDA */
+  text-align: center;
+  color: rgb(21, 21, 100);
+  font-weight: 600;
+}
+
+/* IMPORTANTE!   ==>  AQUI VAI O TRATAMENTO PARA COLOCAR OS 3 CARDS, QUE ESTÃO UM ABAIXO DO OUTRO, PARA UM AO LADO DO OUTRO (COLUNA).
+OUTRA COISA: SÓ FIZ O QUE VEM A SEGUIR, O '#features .fea-base', APÓS A 'MARCA UM'*/
+
+#recursos .rec-base {
+  display: grid; /* PERMITE TRATAR O GRADEAMENTO 'grid' */
+  /* MODELO DE GRADE DE COLUNAS: 'grid-template-columns' -
+   VOU REPPETIR AS COLUNAS: 'repeat' - 
+   PARA SER RESPPONSÍVEL: 'auto-fit' - 
+   LARGURA DAS COLUNAS QUE RECEBERÃO OS CARDS: 'minmax' de '320pix' OCUPANDO 1 QUADRO CERTO '1fr' */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem; /* ESPAÇO ENTRE OS CARDS NO SENTIDO VERTICAL */
+  margin-top: 50px; /* MARGEM ENTRE OS 3 CARDS E PARÁGRAFO 'Replenish man...'  */
+}
+#recursos .rec-box {
+  /* TRATAR PRIMEIRO CARD */
+  background: #f9f9ff; /* COR DO PRIMEIRO CARD / OBSERVE QUE 'card' NÃO É BACKGROUND-COLOR E SIM BACKGROUND APENAS */
+  text-align: start;
+  padding: 10px;
+}
+#recursos .rec-box i {
+  /*  TRATAR DO ÍCONE DO PRIMEIRO CARD */
+  font-size: 2.3rem;
+  color: rgb(44, 44, 80);
+}
+
+#recursos .rec-box h3 {
+  /* TRATAR DO TÍTULO 'h3' DO PRIMEIRO CARD */
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(21, 21, 100);
+  padding: 13px 30px 7px 0;
+}
+#recursos .rec-box p {
+  /* TRATAR DO PARÁGRAFO DO PRIMEIRO CARD */
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(46, 46, 59);
+}
+/* IMPORTANTE!  ACIMA ESTÁ TRATAMENTO DO 'PRIMEIRO CARD', MAS COMO ELES SERÃO REPETIDOS  EM:'#features .fea-base', BASTA TRATAR UM CARD.
+'MARCA UM' ATÉ AQUI */
+
+/* CURSOS */
+
+/* id=cursos */
+
+#cursos {
+  padding: 6vw 8vw 8vw 8vw;
+  text-align: center;
+  color: rgb(21, 21, 100);
+  font-weight: 600;
+}
+#cursos p{
+  color: rgb(21, 21, 100);
+  font-weight: 600;
+}
+
+/* class="caixa-de-cursos" */
+
+#cursos .caixa-de-cursos{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 50px;
+}
+
+/* class="cada-curso" */
+
+#cursos .cada-curso{
+  text-align: start;
+  background: #f9f9ff;
+  height: 100%;
+  position: relative; 
+}
+
+/* CLASSE 'img' */
+
+#cursos .cada-curso img{
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* class="detalhes" */
+
+#cursos .cada-curso .detalhes{
+  padding: 15px 15px 0 15px;
+}
+
+/* class="estrelas" */
+
+#cursos .cada-curso .detalhes i{
+  color: #fdc93b;
+  font-size: 0.7rem;
+  margin: 1px;
+}
+
+/* class="categoria" */
+ /* CATEGORIA PRASENCIAL/ONLINE */
+#cursos .cada-curso .categoria{
+  background-color: rgb(74, 74, 136);
+  color: #fff;
+  line-height: 80px;
+  font-size: small;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 15px;
+  bottom: 100px;
+}
+
+/* REGISTRO */
+
+/* id="registro" */
+
+#registro{
+  padding: 6vw 8vw 6vw 8vw;
+  background-image: linear-gradient(
+      rgba(99, 112, 168, 0.5),
+      rgba(81, 91, 233, 0.5)
+    ),
+    url("/assets/images/registroConta.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex; /* O QUE ESTAVA UM ABAIXO DO OUTRO PASSA A FICAR UM AO LADO DO OUTRO - EM LINHA */
+  justify-content: space-between
+    /* CONTINUA UMA AO LADO DO OUTRO MAS AGORA COM EAPAÇO ENTRE ELES */;
+}
+
+#registro .lembrete{
+  color: #fff;
+}
+#registro .lembrete h1{
+  color: #fff;
+  font-size: 1.3rem;
+}
+#registro .lembrete .time{
+  display: flex;  /* DISPÓE EM LINHA (COMO NA ROW) */
+  margin-top: 40px;  /* MARGEM ENTRE 0S NÚMEROS E O 'REGISTRE-SE...' */
+
+}
+#registro .lembrete .time .date{
+  text-align: center;
+  padding: 13px 33px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 8px;
+  margin: 0 5px 10px 5px;
+  /* border: 2px solid #fff; */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#registro .form{
+  background: #f9f9ff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;  
+  box-shadow: 0 8px 32px 0 burlywood;
+  
+}
+
+#registro .form input{
+  margin: 15px 10px;  /* 15 CIMA/BAIXO 10 DIR/ESQ */
+  border: 1px solid rgb(84, 40, 241);
+  outline: none;  /* SEM CONTORNOS NA BORDA */
+}
+
+#registro .amarelo{
+  text-decoration: none;
+  font-size: 00.9rem;
+  padding: 13px 35px;
+  background-color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 0.4s ease;
+}
+
+#registro .form a.amarelo {
+  color: rgb(21, 21, 100);
+  background-color: #ffd700;
+  
+  
+}
+#registro .form a.amarelo:hover {
+  color: #ffd700;
+  background-color: rgb(21, 21, 100);
+}
+#registro .form .btn{
+  margin-top: 10px;
+}
+
+/* id="equipe" */
+
+#equipe{
+  padding: 6vw 8vw 6vw 8vw;
+  text-align: center;
+}
+#equipe p{
+  color: rgb(21, 21, 100);
+  font-weight: 600;
+}
+#equipe .equipe-box{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+  grid-gap: 0.5rem;
+  margin-top: 50px;
+}
+.professores{
+  background-color: lightgrey;
+  padding: 30px 10px;
+}
+.pro-links{
+  margin-top: 10px;
+  }
+  .pro-links i{
+    padding: 10px 13px;
+    border: 1px solid rgb(21, 21, 100);
+    cursor: pointer;
+  }
+  .pro-links i:hover{
+    color: #fff;
+    background-color: rgb(21, 21, 100);
+    transition: 0.2s;
+  }
+
+  /* FOOTER */
+  
+  /* VEJA: CLASSES NATIVAS NÃO PRECISAM DO PONTO(.) ANTES */
+
+  footer{
+    padding: 6vw;
+    background-color: #101c32;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  footer .footer-col{
+    padding-top: 10px;
+  }
+  footer h3{
+    color: rgb(241, 240, 245);
+    font-weight: 600;
+    padding-bottom: 20px;
+    margin-top: 20px;
+  }
+  footer li{
+    list-style: none;
+    color: #7b838a;
+    padding: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  footer li:hover{
+    color: rgb(241, 240, 245);
+  }
+  footer p{
+    color: #7b838a;
+  }
+  footer .inscreva{
+    margin-top: 20px;
+  }
+  footer input{
+    width: 220px;
+    padding: 15px 12px;
+    background: #334f6c;
+    border: none;
+    outline: none;
+  }
+  footer .inscreva a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 12px 15px;
+    background-color: #fff;
+    font-weight: 600;
+    border-radius: 3px;
+    color: #fff;
+    background: #fdc938;
+    transition: 0.3s ease;
+  }
+  footer .inscreva a:hover{
+    color: rgb(21, 21, 100);
+    background: #fff;
+  }
+  footer .copyright{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  footer .copyright p{
+    color: #fff;
+  }
+  footer .copyright p em{
+    cursor: pointer;
+  }
+  footer .copyright .pro-links{
+    margin-top: 0px;
+  }
+  footer .copyright .pro-links i{
+    background-color: #5f7185;
+    color: #fff;
+  }
+  footer .copyright .pro-links i:hover{
+    color: #2c2c2c;
+    background-color: #fdc938;
+    transition: 0.2s;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
